@@ -89,6 +89,67 @@ form#add-note textarea {
   height: 20vh;
 }
 
+div#show-notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid whitesmoke;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px auto;
+  width: 100%;
+}
+
+div#show-notes h2 {
+  font-size: 24px;
+  color: brown;
+}
+
+div#show-notes div.single-note {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  width: 95%;
+  border: 2px solid lightgray;
+  background-color: whitesmoke;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+div.single-note p {
+  font-size: 18px;
+}
+
+div.single-note div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-evenly;
+  text-align: center;
+  color: black;
+  margin: 10px auto;
+}
+
+div.single-note div button {
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 25px;
+}
+
+div.single-note div button:hover {
+  background-color: gray;
+}
+
+button.update {
+  background-color: skyblue;
+}
+
+button.delete {
+  background-color: crimson;
+}
+
 
 
 

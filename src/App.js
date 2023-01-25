@@ -1,6 +1,7 @@
 
 import './App.css';
 import AddNote from './components/addNote';
+import ShowNotes from './components/showNote';
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
       <p>A simple notebook app powered by PERN stack.</p>
       <br></br>
       <AddNote />
+      <br></br>
+      <ShowNotes />
     </div>
   );
 }
