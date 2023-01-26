@@ -45,6 +45,19 @@ function ShowNotes() {
 
 function SingleNote({note}) {
 
+    const hanldeDeleteNote = async (e) => {
+        let id = e.target.id;
+        let deleteData = await fetch(`https://postgres-notebook.onrender.com/api/note/${id}`,{
+            method: "DELETE",
+        });
+        if (deleteData.ok) {
+            let deleteDataJson = await deleteData.json();
+            console.log(deleteDataJson);
+        } else {
+            console.log("Error while deleting the note")
+        }
+    }
+
     return (
         <div className="single-note">
             <h2 className="title">
@@ -59,7 +72,7 @@ function SingleNote({note}) {
             </p>
             <div>
                 <button className="update" id={note.noteid}>Update</button>
-                <button className="delete" id={note.noteid}>Delete</button>
+                <button className="delete" id={note.noteid} onClick={hanldeDeleteNote}>Delete</button>
             </div>
         </div>
     )
